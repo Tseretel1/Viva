@@ -1,0 +1,130 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0px;
+}
+.link-align{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 50%;
+    align-items: center;
+}
+.midlle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: containerLoad 1s;
+}
+.header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    animation: logoAnimation 1s;
+}
+.title{
+    font-size: 100px;
+}
+.sub-title{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #c2ac5d;
+    text-align: center;
+    width: 50%;
+}
+a{
+    text-decoration: none;
+}
+.logo-align{
+    border: 1px solid transparent;
+    width: 50%;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.445);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    animation: 2s mainlogo;
+}
+.main-logo{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 500;
+}
+@keyframes mainlogo {
+    0%{
+        scale: 0;
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+        height: 100%;
+    }
+    70%{
+        background-color: transparent;
+    }
+    100%{
+        scale: 1;
+    }
+}
+.logo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes containerLoad {
+    0%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+@media screen and (max-width: 900px){
+    .link-align{
+        width: 90%;
+    }
+    .logo-align{
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .header{
+        height: 100%;
+    }
+   
+    .sub-title{
+        display: none;
+    }
+    .main-logo{
+        width: 200px;
+        height: 200px;
+    }
+}
